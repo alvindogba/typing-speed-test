@@ -16,7 +16,7 @@ body{
     background: radial-gradient(circle, rgba(55,48,163,1) 0%, rgba(52,65,252,1) 40%, rgba(78,136,241,1) 57%, rgba(45,45,255,1) 62%, rgba(104,209,230,1) 100%);;
 }
 #paragraph{
-    width: 85%;
+    width: 90%;
     min-height: 150px;
     padding: 5px;
     border: 1px solid gainsboro;
@@ -29,21 +29,34 @@ body{
 }
 
 .dashboard{
-    width: 85%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     background-color: black;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-.correct{
-    color: green;
-   
+.view_board{
+    width: 100%;
+    min-height: 30px;
+    height: max-content;
+    padding: 6px;
+    text-align: left;
+    background-color: whitesmoke;
 }
 
-.wrong{
+.correct{
+    color: rgb(21, 226, 21);
+}
+#time_left{
+    color: yellow;
+}
+.wrong,  #error{
     color: red;
     
 }
+
+
