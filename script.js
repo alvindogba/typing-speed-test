@@ -8,6 +8,7 @@ let wpmDisplay = document.getElementById("wpm");
 let accuracy = document.getElementById("accuracy");
 let cpm = document.getElementById("cpm");
 let startButton = document.getElementById("start_Game");
+let retryButton = document.getElementById("retry_game");
 
 // Setting global variables
 let time = 60;
@@ -43,7 +44,7 @@ function displayResults() {
 }
 
 // Event listener for the start button to fetch and display a random paragraph
-startButton.addEventListener("mouseenter", () => {
+startButton.addEventListener("click", () => {
     
     fetch('text.json')
       .then(response => response.json())
@@ -59,6 +60,11 @@ startButton.addEventListener("mouseenter", () => {
         startTime = Date.now();
         countDown();
       });
+      startButton.style.display="none";
+      retryButton.style.display="flex";
+
+      document.querySelector(".view_board").style.display="block";
+      
 });
 
 // Keyboard event listener to capture user input
@@ -117,3 +123,13 @@ function calculateCpm(){
      
     cpm.textContent = keys.length;
 }
+
+document.getElementById("retry_game").style.display="none";
+// Restarting the game
+retryButton.addEventListener("click", (e)=>{
+location.reload()
+
+    startButton.style.display="flex";
+    retryButton.style.display="none";
+
+})

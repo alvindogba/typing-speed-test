@@ -11,7 +11,7 @@ body{
 .main_section{
     color: white;
     padding: 3%;
-    text-align: center;
+    text-align: left;
     height: 100vh;
     background: radial-gradient(circle, rgba(55,48,163,1) 0%, rgba(52,65,252,1) 40%, rgba(78,136,241,1) 57%, rgba(45,45,255,1) 62%, rgba(104,209,230,1) 100%);;
 }
@@ -37,15 +37,17 @@ body{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+
 }
 
 .view_board{
     width: 100%;
     min-height: 30px;
     height: max-content;
-    padding: 10px;
+    padding: 10px 0px;
     text-align: left;
     background-color: whitesmoke;
+    display: none;
 }
 
 .correct{
